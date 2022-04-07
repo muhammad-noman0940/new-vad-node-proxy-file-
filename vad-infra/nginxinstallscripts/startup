@@ -1,0 +1,10 @@
+#!/bin/sh
+mkdir /home/nxautomation/panrana22
+cd /home/nxautomation/azagent
+./svc.sh stop
+./svc.sh uninstall
+su - nxautomation -c /home/nxautomation/nginxinstallscripts/installpermanentagent_uat.sh
+
+sleep 30
+sh /home/nxautomation/nginxinstallscripts/startpermanentagent.sh nxautomation
+sleep 30

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <style type="text/css">
+      .container {
+        display: flex;
+        justify-content: center;
+        margin: 139px auto;
+      }
+
+      .errorContainer {
+        text-align: center;
+        height: 411px;
+        width: 600px;
+        color: #333333;
+      }
+
+      .authorImage {
+        height: 300px;
+        width: 300px;
+      }
+
+      .errorTitle {
+        font-size: 25px;
+        font-weight: 900;
+        line-height: 31px;
+      }
+
+      .errorDescription {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+      }
+
+      .callSupport {
+        color: #333333;
+        font-weight: bold;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .authorImage {
+          height: 152px;
+          width: 152px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="errorContainer">
+        <img src="" alt="Author image" class="authorImage" />
+        <p class="errorTitle">This is unexpected</p>
+        <p class="errorDescription">
+          Please give it a moment and try refreshing the page.
+          <a class="callSupport" href="tel://123">Call 123</a> if this problem
+          persists.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector('.authorImage').src =
+    window.location.origin + '/-/jssmedia/vad/img/placeholder100-100.jpg';
+</script>

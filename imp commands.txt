@@ -1,0 +1,1 @@
+pm2 start index.js -i 1 --time -o C:\pm2-logs\server-output.log -e C:\pm2-logs\server-error.log

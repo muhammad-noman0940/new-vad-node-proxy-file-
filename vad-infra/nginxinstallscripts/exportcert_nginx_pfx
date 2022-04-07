@@ -1,0 +1,18 @@
+Connect-AzAccount -Identity
+
+
+
+$cert=Get-AzKeyVaultCertificate -VaultName 'kv-aen-prod-sc-f02-01' -Name 'visitabudhabi-ae'
+#$password = Get-AzKeyVaultSecret -VaultName 'kv-aen-prod-sc-f02-01' -Name 'sch-sc2-dct-gov-ae'
+$secret.SecretValueText = Get-AzKeyVaultSecret -VaultName 'kv-aen-prod-sc-f02-01' -Name $cert.Name
+$secretByte = [Convert]::FromBase64String($secret.secretvaluetext)
+$x509Cert = new-object System.Security.Cryptography.X509Certificates.X509Certificate2
+$x509Cert.Import($secretByte, "", "Exportable,PersistKeySet")
+$type = [System.Security.Cryptography.X509Certificates.X509ContentType]::Pfx
+$password="nginxserver@1989"
+$pfxFileByte = $x509Cert.Export($type, $password)
+[System.IO.File]::WriteAllBytes("E:\Certificates\prodservercert-ae.pfx", $pfxFileByte)
+Add-Content E:\Certificates\password.txt $password
+$content = [System.IO.File]::ReadAllText("E:\Certificates\password.txt")
+$content = $content.Trim()
+[System.IO.File]::WriteAllText("E:\Certificates\password.txt", $content)

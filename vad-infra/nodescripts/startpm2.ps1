@@ -1,0 +1,2 @@
+﻿Set-Location -Path "E:\ui-builds\extracted\UI-artifact\node-proxy"
+pm2 start index.js -i 1 --time -o F:\pm2-logs\server-output.log -e F:\pm2-logs\server-error.log -x -- -- E:\\Certificates\\np-uat-visitabudhabi-ae.pfx P@ssw0rd@009988

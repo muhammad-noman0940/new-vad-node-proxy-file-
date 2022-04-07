@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Scripts at Start and Stop
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/home/nxautomation/startup
+ExecStop=/home/nxautomation/shutdown
+
+[Install]
+WantedBy=multi-user.target

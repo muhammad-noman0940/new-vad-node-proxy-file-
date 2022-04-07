@@ -1,0 +1,2 @@
+(this.webpackJsonpvad=this.webpackJsonpvad||[]).push([[28],{921:function(t,e,a){"use strict";a.r(e);var n=a(0),c=a.n(n),i=a(47),r=a(299),o=a(143),s=a(861);e.default=Object(r.a)(Object(i.withSitecoreContext)()(Object(o.b)()((function(t){return c.a.createElement(s.TimerAndTag,Object.assign({},t,{dataLocator:"ConfigurableTimer"}))}))))}}]);
+//# sourceMappingURL=ConfigurableTimer.d4e2119f.chunk.js.map

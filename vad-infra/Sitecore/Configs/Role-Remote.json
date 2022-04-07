@@ -1,0 +1,71 @@
+{
+  "Parameters": {
+    "ComputerName": { "Type": "string", "DefaultValue": "" },
+    "UserName": { "Type": "string", "DefaultValue": "" },
+    "Password": { "Type": "string", "DefaultValue": "" },
+    "SIFVersion": {"Type": "string", "DefaultValue": "2.2.0" }
+  },
+  "Variables": {
+    "SecurePassword": "[ConvertToSecureString(String:parameter('Password'),AsPlainText:true,Force:true)]",
+    "Credential": "[NewPSCredential(Username:parameter('Username'),Password:variable('SecurePassword'))]",
+    "SessionOption": "[NewPSSessionOption(SkipCACheck:true,SkipCNCheck:true)]",
+    "Session": "[NewPSSession(ComputerName:parameter('ComputerName'),Credential:variable('Credential'),SessionOption:variable('SessionOption'),UseSSL:true)]",
+    "ResourceFiles": {},
+    "RemoteResourceFolder": "",
+    "ConfigurationParameters": {},
+    "ImportCertificatesParameters": {},
+    "GenerateCertificatesParameters": {}
+  },
+  "Tasks": {
+    "CopyResourceFilesToRemote": {
+      "Type": "CopyItem",
+      "Params": {
+        "Path": "[variable('ResourceFiles')]",
+        "Destination": "[variable('RemoteResourceFolder')]",
+        "ToSession": "[variable('Session')]"
+      }
+    },
+    "InstallSIFModuleToRemote": {
+      "Type": "InstallPSModule",
+      "Params": {
+        "ModuleName": "SitecoreInstallFramework",
+        "ModuleRequiredVersion": "[parameter('SIFVersion')]",
+        "RepositoryName": "SitecoreGallery",
+        "RepositorySource": "https://sitecore.myget.org/F/sc-powershell/api/v2",
+        "ToSession": "[variable('Session')]"
+      }
+    },
+    "ImportCertificatesToRemote": {
+      "Type": "InstallSitecoreConfiguration",
+      "Params": {
+        "ConfigurationParameters": "[variable('ImportCertificatesParameters')]",
+        "Session": "[variable('Session')]"
+      },
+      "Skip": "[equal(selectobject(InputObject:variable('ImportCertificatesParameters'),ExpandProperty:'Count'),0)]"
+    },
+    "GenerateCertificatesOnRemote": {
+      "Type": "InstallSitecoreConfiguration",
+      "Params": {
+        "ConfigurationParameters": "[variable('GenerateCertificatesParameters')]",
+        "Session": "[variable('Session')]"
+      },
+      "Skip": "[equal(selectobject(InputObject:variable('GenerateCertificatesParameters'),ExpandProperty:'Count'),0)]"
+    },
+    "InstallSitecoreConfigurationToRemote": {
+      "Type": "InstallSitecoreConfiguration",
+      "Params": {
+        "ConfigurationParameters": "[variable('ConfigurationParameters')]",
+        "Session": "[variable('Session')]"
+      }
+    },
+    "RemoveSession": {
+      "Type": "RemovePSSession",
+      "Params": {
+        "Session": "[variable('Session')]"
+      }
+    }
+  },
+  "Settings": {
+    "AutoRegisterExtensions": true
+  }
+}

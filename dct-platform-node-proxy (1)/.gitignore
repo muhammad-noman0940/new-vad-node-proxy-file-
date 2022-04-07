@@ -1,0 +1,14 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# build generated
+/dist
+
+# npm
+node_modules
+
+# package
+package-lock.json
+
+#log
+/logs
+*.log

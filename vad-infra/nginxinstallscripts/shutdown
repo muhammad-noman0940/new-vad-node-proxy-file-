@@ -1,0 +1,8 @@
+#!/bin/sh
+cd /home/nxautomation/azagent
+./svc.sh stop
+./svc.sh uninstall
+su - nxautomation -c "az login --identity  --allow-no-subscriptions"
+su - nxautomation -c "PAT=`az keyvault secret show --vault-name 'kv-aen-preprod-sc-f02-01' --name 'vad-devops-user' --query value -o tsv`"
+su - nxautomation -c "/home/nxautomation/azagent/config.sh remove --unattended -url https://devops.dctabudhabi.ae/Culture/VADRedesign --auth PAT --token $PAT"
+rm -rf azagent

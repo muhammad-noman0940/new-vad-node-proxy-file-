@@ -1,0 +1,62 @@
+# wrangler.toml
+
+# The name of your Workers application
+name = "vad-worker"
+
+
+
+# The kind of application you're deploying to Cloudflare
+type = "webpack"
+
+# Publish to workers.dev by default
+workers_dev = true
+account_id = "8af51af97420f8da1e64b75c279baa01"
+
+[env.dev]
+#  Cloudflare account ID
+account_id = "8af51af97420f8da1e64b75c279baa01"
+# PS Dev Environment (ID of domain )
+zone_id = "bdcd0d2aeff23dde96a81312f86e87e2"
+# The route pattern your Workers application will be served at
+route = "dev.vadsc.in/*"
+
+[env.qa]
+#  Cloudflare account ID
+account_id = "8af51af97420f8da1e64b75c279baa01"
+# PS QA Environment (ID of domain )
+zone_id = "bdcd0d2aeff23dde96a81312f86e87e2"
+# The route pattern your Workers application will be served at
+route = "qa.vadsc.in/*"
+
+[env.uatae]
+#  Cloudflare account ID
+account_id = "c590ec2633481d47dd810622b6134cf0"
+# The ID of your domain you're deploying to
+zone_id = "526743facd41529754a0c6d2290cc4bc"
+# The route pattern your Workers application will be served at
+route = "uat.visitabudhabi.ae/*"
+
+[env.uatcn]
+#  Cloudflare account ID
+account_id = "c590ec2633481d47dd810622b6134cf0"
+# The ID of your domain you're deploying to
+zone_id = "c37e26fd3f58cc145016f7486e93fa7b"
+# The route pattern your Workers application will be served at
+route = "uat.visitabudhabi.cn/*"
+
+[env.prodae]
+#  Cloudflare account ID
+account_id = "c590ec2633481d47dd810622b6134cf0"
+# The ID of your domain you're deploying to
+zone_id = "526743facd41529754a0c6d2290cc4bc"
+# The route pattern your Workers application will be served at
+route = "visitabudhabi.ae/*"
+
+[env.prodcn]
+#  Cloudflare account ID
+account_id = "c590ec2633481d47dd810622b6134cf0"
+# The ID of your domain you're deploying to
+zone_id = "c37e26fd3f58cc145016f7486e93fa7b"
+# The route pattern your Workers application will be served at
+route = "visitabudhabi.cn/*"
+

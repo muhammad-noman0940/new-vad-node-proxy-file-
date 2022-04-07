@@ -1,0 +1,48 @@
+{
+  "name": "headless-ssr-proxy-sample",
+  "version": "1.0.0",
+  "description": "Node server-side-rendering proxy sample for running JSS apps under Node hosting",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js "
+  },
+  "engines": {
+    "node": ">=16.14.2",
+    "npm": ">=8.6.0",
+    "yarn": "1.22.18"
+  },
+  "author": "Author Name (https://jss.sitecore.net)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitecore/jss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sitecore/jss/issues"
+  },
+  "homepage": "https://jss.sitecore.net",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@sitecore-jss/sitecore-jss-proxy": "^14.0.0",
+    "applicationinsights": "^1.8.2",
+    "compression": "~1.7.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "~4.16.4",
+    "https": "^1.0.0",
+    "ipaddr.js": "~1.8.1",
+    "netjet": "^1.4.0",
+    "node_env": "^0.0.3",
+    "node-cache": "~4.2.0",
+    "node-fetch": "~2.3.0",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.5.0",
+    "your-package-name": "^0.0.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "@sitecore-jss/sitecore-jss-cli": "^13.2.0",
+    "nodemon": "^2.0.4"
+  },
+  "keywords": []
+}

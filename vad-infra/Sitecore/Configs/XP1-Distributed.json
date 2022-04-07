@@ -1,0 +1,1179 @@
+{
+    "Parameters": {
+        "ComputerUserName": {
+            "Type": "String",
+            "Description": "The username for computers to deploy Sitecore roles to.",
+            "DefaultValue": ""
+        },
+        "ComputerPassword": {
+            "Type": "String",
+            "Description": "The password for computers to deploy Sitecore roles to.",
+            "DefaultValue": ""
+        },
+        "IdentityServerComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy identity server to.",
+            "DefaultValue": ""
+        },
+        "IdentityServerUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy identity server to."
+        },
+        "IdentityServerPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy identity server to."
+        },
+        "SolrComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer with Solr installed.",
+            "DefaultValue": ""
+        },
+        "SolrUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer with Solr installed."
+        },
+        "SolrPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer with Solr installed."
+        },
+        "CollectionComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy collection role to.",
+            "DefaultValue": ""
+        },
+        "CollectionUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy collection role to."
+        },
+        "CollectionPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy collection role to."
+        },
+        "CollectionSearchComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy collection search role to.",
+            "DefaultValue": ""
+        },
+        "CollectionSearchUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy collection search role to."
+        },
+        "CollectionSearchPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy collection search role to."
+        },
+        "ReferenceDataComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy reference data role to.",
+            "DefaultValue": ""
+        },
+        "ReferenceDataUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy reference data role to."
+        },
+        "ReferenceDataPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy reference data role to."
+        },
+        "MarketingAutomationComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy marketing automation role to.",
+            "DefaultValue": ""
+        },
+        "MarketingAutomationUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy marketing automation role to."
+        },
+        "MarketingAutomationPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy marketing automation role to."
+        },
+        "MarketingAutomationReportingComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy marketing automation reporting role to.",
+            "DefaultValue": ""
+        },
+        "MarketingAutomationReportingUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy marketing automation reporting role to."
+        },
+        "MarketingAutomationReportingPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy marketing automation reporting role to."
+        },
+        "CortexProcessingComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy cortex processing role to.",
+            "DefaultValue": ""
+        },
+        "CortexProcessingUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy cortex processing role to."
+        },
+        "CortexProcessingPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy cortex processing role to."
+        },
+        "CortexReportingComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy cortex reporting role to.",
+            "DefaultValue": ""
+        },
+        "CortexReportingUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy cortex reporting role to."
+        },
+        "CortexReportingPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy cortex reporting role to."
+        },
+        "CMComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy content management role to.",
+            "DefaultValue": ""
+        },
+        "CMUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy content management role to."
+        },
+        "CMPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy content management role to."
+        },
+        "CDComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy content delivery role to.",
+            "DefaultValue": ""
+        },
+        "CDUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy content delivery role to."
+        },
+        "CDPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy content delivery role to."
+        },
+        "PrcComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy processing role to.",
+            "DefaultValue": ""
+        },
+        "PrcUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy processing role to."
+        },
+        "PrcPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy processing role to."
+        },
+        "RepComputerName": {
+            "Type": "String",
+            "Description": "The name of the computer to deploy reporting role to.",
+            "DefaultValue": ""
+        },
+        "RepUserName": {
+            "Type": "String",
+            "Reference": "ComputerUserName",
+            "Description": "The username for the computer to deploy reporting role to."
+        },
+        "RepPassword": {
+            "Type": "String",
+            "Reference": "ComputerPassword",
+            "Description": "The password for the computer to deploy reporting role to."
+        },
+        "CertificateName": {
+            "Type": "String",
+            "Description": "The name of the certificate to be created.",
+            "DefaultValue": ""
+        },
+        "IdentityServerSiteName": {
+            "Type": "string",
+            "Description": "The name of the identity server to be created.",
+            "DefaultValue": "IdentityServer"
+        },
+        "LicenseFile": {
+            "Type": "String",
+            "Description": "The path to the Sitecore license file.",
+            "DefaultValue": ".\\License.xml"
+        },
+        "Prefix": {
+            "Type": "String",
+            "DefaultValue": "SC910",
+            "Description": "The prefix for uniquely identifying instances."
+        },
+        "CollectionPackage": {
+            "Type": "string",
+            "Description": "The path to the Collection package to deploy.",
+            "DefaultValue": ""
+        },
+        "CollectionSearchPackage": {
+            "Type": "string",
+            "Description": "The path to the Collection search package to deploy.",
+            "DefaultValue": ""
+        },
+        "CortexProcessingPackage": {
+            "Type": "string",
+            "Description": "The path to the Processing package to deploy.",
+            "DefaultValue": ""
+        },
+        "MarketingAutomationPackage": {
+            "Type": "string",
+            "Description": "The path to the Marketing Automation package to deploy.",
+            "DefaultValue": ""
+        },
+        "MarketingAutomationReportingPackage": {
+            "Type": "string",
+            "Description": "The path to the Marketing Automation Reporting package to deploy.",
+            "DefaultValue": ""
+        },
+        "CortexReportingPackage": {
+            "Type": "string",
+            "Description": "The path to the reporting package to deploy.",
+            "DefaultValue": ""
+        },
+        "ReferenceDataPackage": {
+            "Type": "string",
+            "Description": "The path to the reference data package to deploy.",
+            "DefaultValue": ""
+        },
+        "CDPackage": {
+            "Type": "string",
+            "Description": "The path to the Sitecore content delivery package to deploy.",
+            "DefaultValue": ""
+        },
+        "CMPackage": {
+            "Type": "string",
+            "Description": "The path to the Sitecore content management package to deploy.",
+            "DefaultValue": ""
+        },
+        "RepPackage": {
+            "Type": "string",
+            "Description": "The path to the Sitecore rep package to deploy.",
+            "DefaultValue": ""
+        },
+        "PrcPackage": {
+            "Type": "string",
+            "Description": "The path to the Sitecore prc package to deploy.",
+            "DefaultValue": ""
+        },
+        "IdentityServerPackage": {
+            "Type": "string",
+            "Description": "The path to the Identity Server package to deploy.",
+            "DefaultValue": ""
+        },
+        "CortexProcessingSitename": {
+            "Type": "string",
+            "DefaultValue": "CortexProcessing",
+            "Description": "The name of the Cortex Processing site to be deployed."
+        },
+        "CollectionSitename": {
+            "Type": "string",
+            "DefaultValue": "XConnectCollection",
+            "Description": "The name of the XConnect Collection site to be deployed."
+        },
+        "CollectionSearchSitename": {
+            "Type": "string",
+            "DefaultValue": "XConnectCollectionSearch",
+            "Description": "The name of the XConnect Collection Search site to be deployed."
+        },
+        "MarketingAutomationSitename": {
+            "Type": "string",
+            "DefaultValue": "XConnectMarketingAutomation",
+            "Description": "The name of the site to be deployed."
+        },
+        "MarketingAutomationReportingSitename": {
+            "Type": "string",
+            "DefaultValue": "XConnectMarketingAutomationReporting",
+            "Description": "The name of the XConnect Marketing Automation Reporting site to be deployed."
+        },
+        "ReferenceDataSitename": {
+            "Type": "string",
+            "DefaultValue": "XConnectReferenceData",
+            "Description": "The name of the XConnect Reference Data site to be deployed."
+        },
+        "CortexReportingSitename": {
+            "Type": "string",
+            "DefaultValue": "CortexReporting",
+            "Description": "The name of the Cortex Reporting site to be deployed."
+        },
+        "CDSitename": {
+            "Type": "string",
+            "DefaultValue": "SitecoreCD",
+            "Description": "The name of the Sitecore Content Delivery site to be deployed."
+        },
+        "CMSitename": {
+            "Type": "string",
+            "DefaultValue": "SitecoreCM",
+            "Description": "The name of the Sitecore Content Management site to be deployed."
+        },
+        "RepSitename": {
+            "Type": "string",
+            "DefaultValue": "SitecoreReporting",
+            "Description": "The name of the Sitecore Reporting site to be deployed."
+        },
+        "PrcSitename": {
+            "Type": "string",
+            "DefaultValue": "SitecoreProcessing",
+            "Description": "The name of the Sitecore Processing site to be deployed."
+        },
+        "SitePhysicalRoot": {
+            "Type": "String",
+            "Description": "Root folder to install the site to. If left on the default [systemdrive]:\\inetpub\\wwwroot will be used.",
+            "DefaultValue": ""
+        },
+        "IdentityServerPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on ID server to install Identity Server site to."
+        },
+        "CollectionPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on XConnect Collection server to install XConnect Collection site to."
+        },
+        "CollectionSearchPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on XConnect Collection search server to install XConnect Collection Search site to."
+        },
+        "MarketingAutomationPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on Marketing Automation server to install Marketing Automation site to."
+        },
+        "MarketingAutomationReportingPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on Marketing Automation Reporting server to install Marketing Automation Reporting site to."
+        },
+        "ReferenceDataPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on XConnect Reference server to install XConnect Reference Data site to."
+        },
+        "CortexProcessingPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on Cortex Processing server to install Cortex Processing site to."
+        },
+        "CortexReportingPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on Cortex Reporting server to install Cortex Reporting site to."
+        },
+        "CDPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on CD server to install Sitecore Content Delivery site to."
+        },
+        "CMPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on CM server to install Sitecore Content Management site to."
+        },
+        "RepPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on Rep server to install Sitecore Reporting site to."
+        },
+        "PrcPhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Path on Prc server to install Sitecore Processing site to."
+        },
+        "ProcessingService": {
+            "Type": "string",
+            "DefaultValue": "https://SitecoreProcessing",
+            "Description": "The url for the Processing Service."
+        },
+        "ReportingService": {
+            "Type": "string",
+            "DefaultValue": "https://SitecoreReporting",
+            "Description": "The url for the Reporting Service."
+        },
+        "CortexReportingService": {
+            "Type": "string",
+            "DefaultValue": "https://CortexReporting",
+            "Description": "The url for the Cortex Reporting Service."
+        },
+        "XConnectCollectionSearchService": {
+            "Type": "string",
+            "DefaultValue": "https://XConnectCollectionSearch",
+            "Description": "The url for the XConnect Collection Service."
+        },
+        "PasswordRecoveryUrl": {
+            "Type": "string",
+            "Description": "Password recovery Url (Host name of CM instance).",
+            "DefaultValue": "https:\\"
+        },
+        "SqlAdminUser": {
+            "Type": "string",
+            "DefaultValue": "sa",
+            "Description": "The Sql admin user account to use when installing databases."
+        },
+        "SqlAdminPassword": {
+            "Type": "string",
+            "DefaultValue": "12345",
+            "Description": "The Sql admin password to use when installing databases."
+        },
+        "SQLServer": {
+            "Type": "String",
+            "DefaultValue": "Localhost",
+            "Description": "The Sql Server where databases will be installed."
+        },
+        "SolrUrl": {
+            "Type": "String",
+            "DefaultValue": "https://localhost:8983/solr",
+            "Description": "The Solr instance to use."
+        },
+        "SolrRoot": {
+            "Type": "String",
+            "DefaultValue": "C:\\solr-8.1.1",
+            "Description": "The file path to the Solr instance."
+        },
+        "SolrService": {
+            "Type": "String",
+            "DefaultValue": "Solr-8.1.1",
+            "Description": "The name of the Solr service."
+        },
+        "XConnectCollectionService": {
+            "Type": "String",
+            "DefaultValue": "https://localhost",
+            "Description": "The URL of the XConnect Collection service."
+        },
+        "XConnectReferenceDataService": {
+            "Type": "String",
+            "DefaultValue": "https://localhost",
+            "Description": "The URL of the XConnect Reference Data service."
+        },
+        "MarketingAutomationOperationsService":{
+            "Type": "String",
+            "DefaultValue": "https://localhost",
+            "Description": "The URL of the Marketing Automation Operations service."
+        },
+        "MarketingAutomationReportingService":{
+            "Type": "String",
+            "DefaultValue": "https://localhost",
+            "Description": "The URL of the Marketing Automation Operations service."
+        },
+        "MachineLearningServerUrl": {
+            "Type": "String",
+            "DefaultValue": "http://localhost",
+            "Description": "The URL of the Machine Learning Service."
+        },
+        "AllowedCorsOrigins": {
+            "Type": "string",
+            "Description": "Pipe-separated list of instances (URIs) that are allowed to login via Sitecore Identity.",
+            "DefaultValue": ""
+        },
+        "ClientSecret": {
+            "Type": "string",
+            "Description": "Client secret of PasswordClient section. It's a random string between 1 and 100 symbols long.",
+            "DefaultValue": "IdentityServerClientSecret"
+        },
+        "SitecoreIdentityAuthority": {
+            "Type": "string",
+            "DefaultValue": "https://SitecoreIdentityServerHost",
+            "Description": "IdentityServer provider URI."
+        },
+        "DownloadLocations": {
+            "Type": "String",
+            "DefaultValue": ".\\downloads.json"
+        },
+        "IdentityServerCertificatesGeneration:CertificateName": {
+            "Type": "String",
+            "Reference": "IdentityServerComputerName",
+            "Description": "Override to pass IdentityServerSiteName value to IdentityServerCertificates config."
+        },
+        "IdentityServer:ComputerName": {
+            "Type": "String",
+            "Reference": "IdentityServerComputerName",
+            "Description": "Override to pass IdentityServerComputerName value to IdentityServer config."
+        },
+        "IdentityServer:UserName": {
+            "Type": "String",
+            "Reference": "IdentityServerUserName",
+            "Description": "Override to pass IdentityServerUserName value to IdentityServer config."
+        },
+        "IdentityServer:Password": {
+            "Type": "String",
+            "Reference": "IdentityServerPassword",
+            "Description": "Override to pass IdentityServerPassword value to IdentityServer config."
+        },
+        "XConnectCertificatesGeneration:CertificateName": {
+            "Type": "String",
+            "Reference": "CertificateName",
+            "Description": "Override to pass CertificateName value to Certificates config."
+        },
+        "XConnectSolr:ComputerName": {
+            "Type": "String",
+            "Reference": "SolrComputerName",
+            "Description": "Override to pass SolrComputerName value to SitecoreSolr config."
+        },
+        "XConnectSolr:UserName": {
+            "Type": "String",
+            "Reference": "SolrUserName",
+            "Description": "Override to pass SolrUserName value to SitecoreSolr config."
+        },
+        "XConnectSolr:Password": {
+            "Type": "String",
+            "Reference": "SolrPassword",
+            "Description": "Override to pass SolrPassword value to SitecoreSolr config."
+        },
+        "Collection:ComputerName": {
+            "Type": "String",
+            "Reference": "CollectionComputerName",
+            "Description": "Override to pass CollectionComputerName value to Collection config."
+        },
+        "Collection:UserName": {
+            "Type": "String",
+            "Reference": "CollectionUserName",
+            "Description": "Override to pass CollectionUserName value to Collection config."
+        },
+        "Collection:Password": {
+            "Type": "String",
+            "Reference": "CollectionPassword",
+            "Description": "Override to pass CollectionPassword value to Collection config."
+        },
+        "CollectionSearch:ComputerName": {
+            "Type": "String",
+            "Reference": "CollectionSearchComputerName",
+            "Description": "Override to pass CollectionSearchComputerName value to CollectionSearch config."
+        },
+        "CollectionSearch:UserName": {
+            "Type": "String",
+            "Reference": "CollectionSearchUserName",
+            "Description": "Override to pass CollectionSearchUserName value to CollectionSearch config."
+        },
+        "CollectionSearch:Password": {
+            "Type": "String",
+            "Reference": "CollectionSearchPassword",
+            "Description": "Override to pass CollectionSearchPassword value to CollectionSearch config."
+        },
+        "ReferenceData:ComputerName": {
+            "Type": "String",
+            "Reference": "ReferenceDataComputerName",
+            "Description": "Override to pass SitecoreCMComputerName value to SitecoreCM config."
+        },
+        "ReferenceData:UserName": {
+            "Type": "String",
+            "Reference": "ReferenceDataUserName",
+            "Description": "Override to pass SitecoreCMUserName value to SitecoreCM config."
+        },
+        "ReferenceData:Password": {
+            "Type": "String",
+            "Reference": "ReferenceDataPassword",
+            "Description": "Override to pass SitecoreCMPassword value to SitecoreCM config."
+        },
+        "MarketingAutomation:ComputerName": {
+            "Type": "String",
+            "Reference": "MarketingAutomationComputerName",
+            "Description": "Override to pass SitecoreCMComputerName value to SitecoreCM config."
+        },
+        "MarketingAutomation:UserName": {
+            "Type": "String",
+            "Reference": "MarketingAutomationUserName",
+            "Description": "Override to pass SitecoreCMUserName value to SitecoreCM config."
+        },
+        "MarketingAutomation:Password": {
+            "Type": "String",
+            "Reference": "MarketingAutomationPassword",
+            "Description": "Override to pass SitecoreCMPassword value to SitecoreCM config."
+        },
+        "MarketingAutomationReporting:ComputerName": {
+            "Type": "String",
+            "Reference": "MarketingAutomationReportingComputerName",
+            "Description": "Override to pass SitecoreCMComputerName value to SitecoreCM config."
+        },
+        "MarketingAutomationReporting:UserName": {
+            "Type": "String",
+            "Reference": "MarketingAutomationReportingUserName",
+            "Description": "Override to pass SitecoreCMUserName value to SitecoreCM config."
+        },
+        "MarketingAutomationReporting:Password": {
+            "Type": "String",
+            "Reference": "MarketingAutomationReportingPassword",
+            "Description": "Override to pass SitecoreCMPassword value to SitecoreCM config."
+        },
+        "CortexProcessing:ComputerName": {
+            "Type": "String",
+            "Reference": "CortexProcessingComputerName",
+            "Description": "Override to pass SitecoreCMComputerName value to SitecoreCM config."
+        },
+        "CortexProcessing:UserName": {
+            "Type": "String",
+            "Reference": "CortexProcessingUserName",
+            "Description": "Override to pass SitecoreCMUserName value to SitecoreCM config."
+        },
+        "CortexProcessing:Password": {
+            "Type": "String",
+            "Reference": "CortexProcessingPassword",
+            "Description": "Override to pass SitecoreCMPassword value to SitecoreCM config."
+        },
+        "CortexReporting:ComputerName": {
+            "Type": "String",
+            "Reference": "CortexReportingComputerName",
+            "Description": "Override to pass SitecoreCMComputerName value to SitecoreCM config."
+        },
+        "CortexReporting:UserName": {
+            "Type": "String",
+            "Reference": "CortexReportingUserName",
+            "Description": "Override to pass SitecoreCMUserName value to SitecoreCM config."
+        },
+        "CortexReporting:Password": {
+            "Type": "String",
+            "Reference": "CortexReportingPassword",
+            "Description": "Override to pass SitecoreCMPassword value to SitecoreCM config."
+        },
+        "SitecoreSolr:ComputerName": {
+            "Type": "String",
+            "Reference": "SolrComputerName",
+            "Description": "Override to pass SolrComputerName value to SitecoreSolr config."
+        },
+        "SitecoreSolr:UserName": {
+            "Type": "String",
+            "Reference": "SolrUserName",
+            "Description": "Override to pass SolrUserName value to SitecoreSolr config."
+        },
+        "SitecoreSolr:Password": {
+            "Type": "String",
+            "Reference": "SolrPassword",
+            "Description": "Override to pass SolrPassword value to SitecoreSolr config."
+        },
+        "CMCertificatesImport:ComputerName": {
+            "Type": "String",
+            "Reference": "CMComputerName",
+            "Description": "Override to pass SitecoreCMComputerName value to SitecoreCM config."
+        },
+        "CMCertificatesImport:UserName": {
+            "Type": "String",
+            "Reference": "CMUserName",
+            "Description": "Override to pass SitecoreCMUserName value to SitecoreCM config."
+        },
+        "CMCertificatesImport:Password": {
+            "Type": "String",
+            "Reference": "CMPassword",
+            "Description": "Override to pass SitecoreCMPassword value to SitecoreCM config."
+        },
+        "CM:ComputerName": {
+            "Type": "String",
+            "Reference": "CMComputerName",
+            "Description": "Override to pass SitecoreCMComputerName value to SitecoreCM config."
+        },
+        "CM:UserName": {
+            "Type": "String",
+            "Reference": "CMUserName",
+            "Description": "Override to pass SitecoreCMUserName value to SitecoreCM config."
+        },
+        "CM:Password": {
+            "Type": "String",
+            "Reference": "CMPassword",
+            "Description": "Override to pass SitecoreCMPassword value to SitecoreCM config."
+        },
+        "CD:ComputerName": {
+            "Type": "String",
+            "Reference": "CDComputerName",
+            "Description": "Override to pass SitecoreCDComputerName value to SitecoreCD config."
+        },
+        "CD:UserName": {
+            "Type": "String",
+            "Reference": "CDUserName",
+            "Description": "Override to pass SitecoreCDUserName value to SitecoreCD config."
+        },
+        "CD:Password": {
+            "Type": "String",
+            "Reference": "CDPassword",
+            "Description": "Override to pass SitecoreCDPassword value to SitecoreCD config."
+        },
+        "Prc:ComputerName": {
+            "Type": "String",
+            "Reference": "PrcComputerName",
+            "Description": "Override to pass SitecoreCDComputerName value to SitecoreCD config."
+        },
+        "Prc:UserName": {
+            "Type": "String",
+            "Reference": "PrcUserName",
+            "Description": "Override to pass SitecoreCDUserName value to SitecoreCD config."
+        },
+        "Prc:Password": {
+            "Type": "String",
+            "Reference": "PrcPassword",
+            "Description": "Override to pass SitecoreCDPassword value to SitecoreCD config."
+        },
+        "Rep:ComputerName": {
+            "Type": "String",
+            "Reference": "RepComputerName",
+            "Description": "Override to pass SitecoreCDComputerName value to SitecoreCD config."
+        },
+        "Rep:UserName": {
+            "Type": "String",
+            "Reference": "RepUserName",
+            "Description": "Override to pass SitecoreCDUserName value to SitecoreCD config."
+        },
+        "Rep:Password": {
+            "Type": "String",
+            "Reference": "RepPassword",
+            "Description": "Override to pass SitecoreCDPassword value to SitecoreCD config."
+        }
+    },
+    "Variables": {
+        "RemoteResourceFolder": "C:\\ResourceFiles",
+        "DownloadLocations": "[JoinPath(variable('RemoteResourceFolder'),SplitPath(Path:parameter('DownloadLocations'),Leaf:true))]",
+        "CertImportConfig": ".\\importcert.json",
+        "CertGenerationConfig": ".\\createcert.json",
+        "IdentityServerClientCertFileName": "[concat(parameter('IdentityServerCertificatesGeneration_CertificateName'), '.pfx')]",
+        "IdentityServerRootCertFileName": "[concat(parameter('IdentityServerCertificatesGeneration_RootCertFileName'), '.pfx')]",
+        "IdentityServerCertImportResourceFiles": [
+            "[variable('CertImportConfig')]",
+            "[JoinPath(parameter('IdentityServerCertificatesGeneration_CertPath'), variable('IdentityServerClientCertFileName'))]",
+            "[JoinPath(parameter('IdentityServerCertificatesGeneration_CertPath'), variable('IdentityServerRootCertFileName'))]"
+        ],
+        "IdentityServerCertImportConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertImportConfig'),Leaf:true))]",
+            "ClientCertPath": "[JoinPath(variable('RemoteResourceFolder'), variable('IdentityServerClientCertFileName'))]",
+            "RootCertPath": "[JoinPath(variable('RemoteResourceFolder'), variable('IdentityServerRootCertFileName'))]",
+            "ClientCertPassword": "[variable('IdentityServerCertificatesGeneration_Password.String')]",
+            "RootCertPassword": "[variable('IdentityServerCertificatesGeneration_Password.String')]"
+        },
+        "XConnectClientCertFileName": "[concat(parameter('XConnectCertificatesGeneration_CertificateName'), '.pfx')]",
+        "XConnectRootCertFileName": "[concat(parameter('XConnectCertificatesGeneration_RootCertFileName'), '.pfx')]",
+        "XConnectCertImportResourceFiles": [
+            "[variable('CertImportConfig')]",
+            "[JoinPath(parameter('XConnectCertificatesGeneration_CertPath'), variable('XConnectClientCertFileName'))]",
+            "[JoinPath(parameter('XConnectCertificatesGeneration_CertPath'), variable('XConnectRootCertFileName'))]"
+        ],
+        "XConnectCertImportConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertImportConfig'),Leaf:true))]",
+            "ClientCertPath": "[JoinPath(variable('RemoteResourceFolder'), variable('XConnectClientCertFileName'))]",
+            "RootCertPath": "[JoinPath(variable('RemoteResourceFolder'), variable('XConnectRootCertFileName'))]",
+            "ClientCertPassword": "[variable('XConnectCertificatesGeneration_Password.String')]",
+            "RootCertPassword": "[variable('XConnectCertificatesGeneration_Password.String')]"
+        },
+        "IdentityServerConfig": ".\\IdentityServer.json",
+        "IdentityServerPackage": "[if(parameter('IdentityServerPackage'), parameter('IdentityServerPackage'), parameter('DownloadLocations'))]",
+        "IdentityServerPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('IdentityServerPackage'),Leaf:true))]",
+        "IdentityServerResourceFiles": [ "[variable('IdentityServerConfig')]", "[variable('IdentityServerPackage')]", "[parameter('LicenseFile')]" ],
+        "IdentityServer:ResourceFiles": "[concat(variable('IdentityServerResourceFiles'), variable('IdentityServerCertImportResourceFiles'))]",
+        "IdentityServer:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "IdentityServer:ImportCertificatesParameters": "[variable('IdentityServerCertImportConfigurationParameters')]",
+        "IdentityServer:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('IdentityServerConfig'),Leaf:true))]",
+            "Package": "[if(parameter('IdentityServerPackage'),variable('IdentityServerPackagePath'),'')]",
+            "SiteName": "[parameter('IdentityServerSiteName')]",
+            "PasswordRecoveryUrl": "[parameter('PasswordRecoveryUrl')]",
+            "SitecoreIdentityCert": "[parameter('IdentityServerComputerName')]",
+            "AllowedCorsOrigins": "[parameter('AllowedCorsOrigins')]",
+            "ClientSecret": "[parameter('ClientSecret')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('IdentityServerComputerName')]",
+            "SitePhysicalRoot": "[parameter('IdentityServerPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        },
+        "XConnectSolrConfig": ".\\xconnect-solr.json",
+        "XConnectSolr:ResourceFiles": [ "[variable('XConnectSolrConfig')]" ],
+        "XConnectSolr:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "XConnectSolr:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('XConnectSolrConfig'),Leaf:true))]",
+            "SolrUrl": "[parameter('SolrUrl')]",
+            "SolrRoot": "[parameter('SolrRoot')]",
+            "SolrService": "[parameter('SolrService')]",
+            "CorePrefix": "[parameter('Prefix')]"
+        },
+        "CollectionConfig": ".\\xconnect-xp1-collection.json",
+        "CollectionPackage": "[if(parameter('CollectionPackage'), parameter('CollectionPackage'), parameter('DownloadLocations'))]",
+        "CollectionPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CollectionPackage'),Leaf:true))]",
+        "CollectionResourceFiles": [ "[variable('CollectionConfig')]", "[variable('CollectionPackage')]", "[parameter('LicenseFile')]", "[variable('CertGenerationConfig')]" ],
+        "Collection:ResourceFiles": "[concat(variable('CollectionResourceFiles'), variable('XConnectCertImportResourceFiles'))]",
+        "Collection:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "Collection:ImportCertificatesParameters": "[variable('XConnectCertImportConfigurationParameters')]",
+        "Collection:GenerateCertificatesParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertGenerationConfig'),Leaf:true))]",
+            "CertificateName": "[parameter('CollectionComputerName')]"
+        },
+        "Collection:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CollectionConfig'),Leaf:true))]",
+            "Package": "[if(parameter('CollectionPackage'),variable('CollectionPackagePath'),'')]",
+            "SiteName": "[parameter('CollectionSitename')]",
+            "XConnectCert": "[parameter('CertificateName')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "SqlAdminUser": "[parameter('SqlAdminUser')]",
+            "SqlAdminPassword": "[parameter('SqlAdminPassword')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('CollectionComputerName')]",
+            "SSLCert": "[parameter('CollectionComputerName')]",
+            "SitePhysicalRoot": "[parameter('CollectionPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        },
+        "CollectionSearchConfig": ".\\xconnect-xp1-collectionsearch.json",
+        "CollectionSearchPackage": "[if(parameter('CollectionSearchPackage'), parameter('CollectionSearchPackage'), parameter('DownloadLocations'))]",
+        "CollectionSearchPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CollectionSearchPackage'),Leaf:true))]",
+        "CollectionSearchResourceFiles": [ "[variable('CollectionSearchConfig')]", "[variable('CollectionSearchPackage')]", "[parameter('LicenseFile')]", "[variable('CertGenerationConfig')]" ],
+        "CollectionSearch:ResourceFiles": "[concat(variable('CollectionSearchResourceFiles'), variable('XConnectCertImportResourceFiles'))]",
+        "CollectionSearch:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "CollectionSearch:ImportCertificatesParameters": "[variable('XConnectCertImportConfigurationParameters')]",
+        "CollectionSearch:GenerateCertificatesParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertGenerationConfig'),Leaf:true))]",
+            "CertificateName": "[parameter('CollectionSearchComputerName')]"
+        },
+        "CollectionSearch:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CollectionSearchConfig'),Leaf:true))]",
+            "Package": "[if(parameter('CollectionSearchPackage'),variable('CollectionSearchPackagePath'),'')]",
+            "SiteName": "[parameter('CollectionSearchSitename')]",
+            "XConnectCert": "[parameter('CertificateName')]",
+            "SolrUrl": "[parameter('SolrUrl')]",
+            "SolrCorePrefix": "[parameter('Prefix')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('CollectionSearchComputerName')]",
+            "SSLCert": "[parameter('CollectionSearchComputerName')]",
+            "SitePhysicalRoot": "[parameter('CollectionSearchPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        },
+        "ReferenceDataConfig": ".\\xconnect-xp1-referencedata.json",
+        "ReferenceDataPackage": "[if(parameter('ReferenceDataPackage'), parameter('ReferenceDataPackage'), parameter('DownloadLocations'))]",
+        "ReferenceDataPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('ReferenceDataPackage'),Leaf:true))]",
+        "ReferenceDataResourceFiles": [ "[variable('ReferenceDataConfig')]", "[variable('ReferenceDataPackage')]", "[parameter('LicenseFile')]", "[variable('CertGenerationConfig')]" ],
+        "ReferenceData:ResourceFiles": "[concat(variable('ReferenceDataResourceFiles'), variable('XConnectCertImportResourceFiles'))]",
+        "ReferenceData:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "ReferenceData:ImportCertificatesParameters": "[variable('XConnectCertImportConfigurationParameters')]",
+        "ReferenceData:GenerateCertificatesParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertGenerationConfig'),Leaf:true))]",
+            "CertificateName": "[parameter('ReferenceDataComputerName')]"
+        },
+        "ReferenceData:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('ReferenceDataConfig'),Leaf:true))]",
+            "Package": "[if(parameter('ReferenceDataPackage'),variable('ReferenceDataPackagePath'),'')]",
+            "SiteName": "[parameter('ReferenceDataSitename')]",
+            "XConnectCert": "[parameter('CertificateName')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "SqlAdminUser": "[parameter('SqlAdminUser')]",
+            "SqlAdminPassword": "[parameter('SqlAdminPassword')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('ReferenceDataComputerName')]",
+            "SSLCert": "[parameter('ReferenceDataComputerName')]",
+            "SitePhysicalRoot": "[parameter('ReferenceDataPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        },
+        "MarketingAutomationConfig": ".\\xconnect-xp1-marketingautomation.json",
+        "MarketingAutomationPackage": "[if(parameter('MarketingAutomationPackage'), parameter('MarketingAutomationPackage'), parameter('DownloadLocations'))]",
+        "MarketingAutomationPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('MarketingAutomationPackage'),Leaf:true))]",
+        "MarketingAutomationResourceFiles": [ "[variable('MarketingAutomationConfig')]", "[variable('MarketingAutomationPackage')]", "[parameter('LicenseFile')]", "[variable('CertGenerationConfig')]" ],
+        "MarketingAutomation:ResourceFiles": "[concat(variable('MarketingAutomationResourceFiles'), variable('XConnectCertImportResourceFiles'))]",
+        "MarketingAutomation:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "MarketingAutomation:ImportCertificatesParameters": "[variable('XConnectCertImportConfigurationParameters')]",
+        "MarketingAutomation:GenerateCertificatesParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertGenerationConfig'),Leaf:true))]",
+            "CertificateName": "[parameter('MarketingAutomationComputerName')]"
+        },
+        "MarketingAutomation:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('MarketingAutomationConfig'),Leaf:true))]",
+            "Package": "[if(parameter('MarketingAutomationPackage'),variable('MarketingAutomationPackagePath'),'')]",
+            "SiteName": "[parameter('MarketingAutomationSitename')]",
+            "XConnectCert": "[parameter('CertificateName')]",
+            "XConnectCollectionSearchService": "[parameter('XConnectCollectionSearchService')]",
+            "XConnectReferenceDataService": "[parameter('XConnectReferenceDataService')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "SqlAdminUser": "[parameter('SqlAdminUser')]",
+            "SqlAdminPassword": "[parameter('SqlAdminPassword')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('MarketingAutomationComputerName')]",
+            "SSLCert": "[parameter('MarketingAutomationComputerName')]",
+            "SitePhysicalRoot": "[parameter('MarketingAutomationPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        },
+        "MarketingAutomationReportingConfig": ".\\xconnect-xp1-marketingautomationreporting.json",
+        "MarketingAutomationReportingPackage": "[if(parameter('MarketingAutomationReportingPackage'), parameter('MarketingAutomationReportingPackage'), parameter('DownloadLocations'))]",
+        "MarketingAutomationReportingPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('MarketingAutomationReportingPackage'),Leaf:true))]",
+        "MarketingAutomationReportingResourceFiles": [ "[variable('MarketingAutomationReportingConfig')]", "[variable('MarketingAutomationReportingPackage')]", "[parameter('LicenseFile')]", "[variable('CertGenerationConfig')]" ],
+        "MarketingAutomationReporting:ResourceFiles": "[concat(variable('MarketingAutomationReportingResourceFiles'), variable('XConnectCertImportResourceFiles'))]",
+        "MarketingAutomationReporting:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "MarketingAutomationReporting:ImportCertificatesParameters": "[variable('XConnectCertImportConfigurationParameters')]",
+        "MarketingAutomationReporting:GenerateCertificatesParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertGenerationConfig'),Leaf:true))]",
+            "CertificateName": "[parameter('MarketingAutomationReportingComputerName')]"
+        },
+        "MarketingAutomationReporting:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('MarketingAutomationReportingConfig'),Leaf:true))]",
+            "Package": "[if(parameter('MarketingAutomationReportingPackage'),variable('MarketingAutomationReportingPackagePath'),'')]",
+            "SiteName": "[parameter('MarketingAutomationReportingSitename')]",
+            "XConnectCert": "[parameter('CertificateName')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('MarketingAutomationReportingComputerName')]",
+            "SSLCert": "[parameter('MarketingAutomationReportingComputerName')]",
+            "SitePhysicalRoot": "[parameter('MarketingAutomationReportingPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        },
+        "CortexProcessingConfig": ".\\xconnect-xp1-cortexprocessing.json",
+        "CortexProcessingPackage": "[if(parameter('CortexProcessingPackage'), parameter('CortexProcessingPackage'), parameter('DownloadLocations'))]",
+        "CortexProcessingPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CortexProcessingPackage'),Leaf:true))]",
+        "CortexProcessingResourceFiles": [ "[variable('CortexProcessingConfig')]", "[variable('CortexProcessingPackage')]", "[parameter('LicenseFile')]", "[variable('CertGenerationConfig')]" ],
+        "CortexProcessing:ResourceFiles": "[concat(variable('CortexProcessingResourceFiles'), variable('XConnectCertImportResourceFiles'))]",
+        "CortexProcessing:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "CortexProcessing:ImportCertificatesParameters": "[variable('XConnectCertImportConfigurationParameters')]",
+        "CortexProcessing:GenerateCertificatesParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertGenerationConfig'),Leaf:true))]",
+            "CertificateName": "[parameter('CortexProcessingComputerName')]"
+        },
+        "CortexProcessing:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CortexProcessingConfig'),Leaf:true))]",
+            "Package": "[if(parameter('CortexProcessingPackage'),variable('CortexProcessingPackagePath'),'')]",
+            "SiteName": "[parameter('CortexProcessingSitename')]",
+            "XConnectCert": "[parameter('CertificateName')]",
+            "XConnectCollectionService": "[parameter('XConnectCollectionService')]",
+            "XConnectSearchService": "[parameter('XConnectCollectionSearchService')]",
+            "MachineLearningServerUrl": "[parameter('MachineLearningServerUrl')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "SqlAdminUser": "[parameter('SqlAdminUser')]",
+            "SqlAdminPassword": "[parameter('SqlAdminPassword')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('CortexProcessingComputerName')]",
+            "SSLCert": "[parameter('CortexProcessingComputerName')]",
+            "SitePhysicalRoot": "[parameter('CortexProcessingPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        },
+        "CortexReportingConfig": ".\\xconnect-xp1-cortexreporting.json",
+        "CortexReportingPackage": "[if(parameter('CortexReportingPackage'), parameter('CortexReportingPackage'), parameter('DownloadLocations'))]",
+        "CortexReportingPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CortexReportingPackage'),Leaf:true))]",
+        "CortexReportingResourceFiles": [ "[variable('CortexReportingConfig')]", "[variable('CortexReportingPackage')]", "[parameter('LicenseFile')]", "[variable('CertGenerationConfig')]" ],
+        "CortexReporting:ResourceFiles": "[concat(variable('CortexReportingResourceFiles'), variable('XConnectCertImportResourceFiles'))]",
+        "CortexReporting:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "CortexReporting:ImportCertificatesParameters": "[variable('XConnectCertImportConfigurationParameters')]",
+        "CortexReporting:GenerateCertificatesParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertGenerationConfig'),Leaf:true))]",
+            "CertificateName": "[parameter('CortexReportingComputerName')]"
+        },
+        "CortexReporting:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CortexReportingConfig'),Leaf:true))]",
+            "Package": "[if(parameter('CortexReportingPackage'),variable('CortexReportingPackagePath'),'')]",
+            "SiteName": "[parameter('CortexReportingSitename')]",
+            "XConnectCert": "[parameter('CertificateName')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "SqlAdminUser": "[parameter('SqlAdminUser')]",
+            "SqlAdminPassword": "[parameter('SqlAdminPassword')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('CortexReportingComputerName')]",
+            "SSLCert": "[parameter('CortexReportingComputerName')]",
+            "SitePhysicalRoot": "[parameter('CortexReportingPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        },
+        "SitecoreSolrConfig": ".\\Sitecore-solr.json",
+        "SitecoreSolr:ResourceFiles": [ "[variable('SitecoreSolrConfig')]" ],
+        "SitecoreSolr:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "SitecoreSolr:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('SitecoreSolrConfig'),Leaf:true))]",
+            "SolrUrl": "[parameter('SolrUrl')]",
+            "SolrRoot": "[parameter('SolrRoot')]",
+            "SolrService": "[parameter('SolrService')]",
+            "CorePrefix": "[parameter('Prefix')]"
+        },
+        "CMConfig": ".\\Sitecore-xp1-cm.json",
+        "CMPackage": "[if(parameter('CMPackage'), parameter('CMPackage'), parameter('DownloadLocations'))]",
+        "CMPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CMPackage'),Leaf:true))]",
+        "CMResourceFiles": [ "[variable('CMConfig')]", "[variable('CMPackage')]", "[parameter('LicenseFile')]", "[variable('CertGenerationConfig')]" ],
+        "CM:ResourceFiles": "[concat(variable('CMResourceFiles'), variable('XConnectCertImportResourceFiles'))]",
+        "CM:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "CM:ImportCertificatesParameters": "[variable('XConnectCertImportConfigurationParameters')]",
+        "CM:GenerateCertificatesParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertGenerationConfig'),Leaf:true))]",
+            "CertificateName": "[parameter('CMComputerName')]"
+        },
+        "CM:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CMConfig'),Leaf:true))]",
+            "Package": "[if(parameter('CMPackage'),variable('CMPackagePath'),'')]",
+            "SiteName": "[parameter('CMSitename')]",
+            "XConnectCert": "[parameter('CertificateName')]",
+            "ProcessingService": "[parameter('ProcessingService')]",
+            "ReportingService": "[parameter('ReportingService')]",
+            "CortexReportingService": "[parameter('CortexReportingService')]",
+            "XConnectCollectionSearchService": "[parameter('XConnectCollectionSearchService')]",
+            "XConnectReferenceDataService": "[parameter('XConnectReferenceDataService')]",
+            "MarketingAutomationOperationsService": "[parameter('MarketingAutomationOperationsService')]",
+            "MarketingAutomationReportingService": "[parameter('MarketingAutomationReportingService')]",
+            "SitecoreIdentitySecret": "[parameter('ClientSecret')]",
+            "SitecoreIdentityAuthority": "[parameter('SitecoreIdentityAuthority')]",
+            "SolrUrl": "[parameter('SolrUrl')]",
+            "SolrCorePrefix": "[parameter('Prefix')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "SqlAdminUser": "[parameter('SqlAdminUser')]",
+            "SqlAdminPassword": "[parameter('SqlAdminPassword')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('CMComputerName')]",
+            "SSLCert": "[parameter('CMComputerName')]",
+            "SitePhysicalRoot": "[parameter('CMPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        },
+        "CDConfig": ".\\Sitecore-xp1-cd.json",
+        "CDPackage": "[if(parameter('CDPackage'), parameter('CDPackage'), parameter('DownloadLocations'))]",
+        "CDPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CDPackage'),Leaf:true))]",
+        "CDResourceFiles": [ "[variable('CDConfig')]" , "[variable('CDPackage')]", "[parameter('LicenseFile')]" ],
+        "CD:ResourceFiles": "[concat(variable('CDResourceFiles'), variable('XConnectCertImportResourceFiles'))]",
+        "CD:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "CD:ImportCertificatesParameters": "[variable('XConnectCertImportConfigurationParameters')]",
+        "CD:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CDConfig'),Leaf:true))]",
+            "Package": "[if(parameter('CDPackage'),variable('CDPackagePath'),'')]",
+            "SiteName": "[parameter('CDSitename')]",
+            "XConnectCert": "[parameter('CertificateName')]",
+            "XConnectCollectionService": "[parameter('XConnectCollectionService')]",
+            "XConnectReferenceDataService": "[parameter('XConnectReferenceDataService')]",
+            "MarketingAutomationOperationsService": "[parameter('MarketingAutomationOperationsService')]",
+            "MarketingAutomationReportingService": "[parameter('MarketingAutomationReportingService')]",
+            "SitecoreIdentityAuthority": "[parameter('SitecoreIdentityAuthority')]",
+            "SolrUrl": "[parameter('SolrUrl')]",
+            "SolrCorePrefix": "[parameter('Prefix')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('CDComputerName')]",
+            "SitePhysicalRoot": "[parameter('CDPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        },
+        "PrcConfig": ".\\Sitecore-xp1-prc.json",
+        "PrcPackage": "[if(parameter('PrcPackage'), parameter('PrcPackage'), parameter('DownloadLocations'))]",
+        "PrcPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('PrcPackage'),Leaf:true))]",
+        "PrcResourceFiles": [ "[variable('PrcConfig')]" , "[variable('PrcPackage')]", "[parameter('LicenseFile')]", "[variable('CertGenerationConfig')]" ],
+        "Prc:ResourceFiles": "[concat(variable('PrcResourceFiles'), variable('XConnectCertImportResourceFiles'))]",
+        "Prc:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "Prc:ImportCertificatesParameters": "[variable('XConnectCertImportConfigurationParameters')]",
+        "Prc:GenerateCertificatesParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertGenerationConfig'),Leaf:true))]",
+            "CertificateName": "[parameter('PrcComputerName')]"
+        },
+        "Prc:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('PrcConfig'),Leaf:true))]",
+            "Package": "[if(parameter('PrcPackage'),variable('PrcPackagePath'),'')]",
+            "SiteName": "[parameter('PrcSitename')]",
+            "XConnectCert": "[parameter('CertificateName')]",
+            "XConnectCollectionService": "[parameter('XConnectCollectionService')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "SqlAdminUser": "[parameter('SqlAdminUser')]",
+            "SqlAdminPassword": "[parameter('SqlAdminPassword')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('PrcComputerName')]",
+            "SSLCert": "[parameter('PrcComputerName')]",
+            "SitePhysicalRoot": "[parameter('PrcPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        },
+        "RepConfig": ".\\Sitecore-xp1-rep.json",
+        "RepPackage": "[if(parameter('RepPackage'), parameter('RepPackage'), parameter('DownloadLocations'))]",
+        "RepPackagePath": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('RepPackage'),Leaf:true))]",
+        "RepResourceFiles": [ "[variable('RepConfig')]" , "[variable('RepPackage')]", "[parameter('LicenseFile')]", "[variable('CertGenerationConfig')]" ],
+        "Rep:ResourceFiles": "[concat(variable('RepResourceFiles'), variable('XConnectCertImportResourceFiles'))]",
+        "Rep:RemoteResourceFolder": "[variable('RemoteResourceFolder')]",
+        "Rep:ImportCertificatesParameters": "[variable('XConnectCertImportConfigurationParameters')]",
+        "Rep:GenerateCertificatesParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('CertGenerationConfig'),Leaf:true))]",
+            "CertificateName": "[parameter('RepComputerName')]"
+        },
+        "Rep:ConfigurationParameters": {
+            "Path": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:variable('RepConfig'),Leaf:true))]",
+            "Package": "[if(parameter('RepPackage'),variable('RepPackagePath'),'')]",
+            "SiteName": "[parameter('RepSitename')]",
+            "SqlDbPrefix": "[parameter('Prefix')]",
+            "SqlServer": "[parameter('SqlServer')]",
+            "LicenseFile": "[JoinPath(variable('RemoteResourceFolder'), SplitPath(Path:parameter('LicenseFile'),Leaf:true))]",
+            "HostMappingName": "",
+            "DNSName": "[parameter('RepComputerName')]",
+            "SSLCert": "[parameter('RepComputerName')]",
+            "SitePhysicalRoot": "[parameter('RepPhysicalRoot')]",
+            "DownloadLocations": "[variable('DownloadLocations')]"
+        }
+    },
+    "Includes": {
+        "IdentityServerCertificatesGeneration":{
+            "Source": ".\\createcert.json"
+        },
+        "IdentityServer": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "XConnectCertificatesGeneration": {
+            "Source": ".\\createcert.json"
+        },
+        "XConnectSolr": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "Collection": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "CollectionSearch": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "ReferenceData": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "MarketingAutomation": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "MarketingAutomationReporting": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "CortexProcessing": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "CortexReporting": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "SitecoreSolr": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "CM": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "CD": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "Prc": {
+            "Source": ".\\Role-Remote.json"
+        },
+        "Rep": {
+            "Source": ".\\Role-Remote.json"
+        }
+    }
+}

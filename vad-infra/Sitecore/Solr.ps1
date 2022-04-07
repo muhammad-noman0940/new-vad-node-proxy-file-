@@ -1,0 +1,1 @@
+'C:\Solr\solr-8.5.2\bin\solr' start
